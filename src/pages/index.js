@@ -13,25 +13,29 @@ export default function Home() {
     <div className="divide-y divide-gray-200">
       <Head>
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@tailwindcss" />
-        <meta name="twitter:creator" content="@tailwindcss" />
-        <meta name="twitter:title" content="Blog – Tailwind CSS" />
-        <meta name="twitter:description" content="News content from the Tailwind CSS team." />
-        <meta name="twitter:image" content={`https://blog.tailwindcss.com${twitterCard}`} />
-        <meta property="og:url" content="https://blog.tailwindcss.com" />
+        <meta name="twitter:site" content="@moshekatzdev" />
+        <meta name="twitter:creator" content="@moshekatzdev" />
+        <meta name="twitter:title" content="MKBlog" />
+        <meta name="twitter:description" content="A blog by Moshe Katz." />
+        <meta name="twitter:image" content={`https://moshekatz.dev${twitterCard}`} />
+        <meta property="og:url" content="https://moshekatz.dev" />
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Blog – Tailwind CSS" />
-        <meta property="og:description" content="News content from the Tailwind CSS team." />
-        <meta property="og:image" content={`https://blog.tailwindcss.com${twitterCard}`} />
-        <title>Blog – Tailwind CSS</title>
-        <meta name="description" content="News content from the Tailwind CSS team." />
+        <meta property="og:title" content="MKBlog" />
+        <meta property="og:description" content="A blog by Moshe Katz." />
+        <meta property="og:image" content={`https://moshekatz.dev${twitterCard}`} />
+        <title>MKBlog</title>
+        <meta name="description" content="A blog by Moshe Katz." />
       </Head>
       <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-        <h1 className="text-3xl leading-9 font-extrabold text-gray-900 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-          Latest
-        </h1>
         <p className="text-lg leading-7 text-gray-500">
-          All the latest Tailwind CSS news, straight from the team.
+          A blog by{' '}
+          <a
+            className="text-red-500 hover:text-red-600"
+            href="https://mobile.twitter.com/moshekatzdev"
+          >
+            Moshe Katz
+          </a>
+          .
         </p>
       </div>
       <ul className="divide-y divide-gray-200">
@@ -59,7 +63,7 @@ export default function Home() {
                   <div className="text-base leading-6 font-medium">
                     <Link href={link}>
                       <a
-                        className="text-teal-500 hover:text-teal-600"
+                        className="text-red-500 hover:text-red-600"
                         aria-label={`Read "${meta.title}"`}
                       >
                         Read more &rarr;

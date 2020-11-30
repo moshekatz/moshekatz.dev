@@ -17,7 +17,8 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "tailwindcss": "^1.6.0",
-    "tinytime": "^0.2.6"
+    "tinytime": "^0.2.6",
+    "@feedback-fish/react": "^1.2.1"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^9.4.4",

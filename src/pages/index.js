@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import getAllPostPreviews from '@/getAllPostPreviews'
 import twitterCard from '@/img/twitter-card.jpg'
+import { FeedbackFish } from '@feedback-fish/react'
 
 const posts = getAllPostPreviews()
 
@@ -76,6 +77,9 @@ export default function Home() {
           )
         })}
       </ul>
+      <FeedbackFish projectId="3befe476f585fb">
+        <div>Send feedback</div>
+      </FeedbackFish>
     </div>
   )
 }

@@ -1,8 +1,19 @@
 {
   "compilerOptions": {
-    "baseUrl": "node_modules",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["../src/*"]
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/data/*": [
+        "data/*"
+      ],
+      "@/lib/*": [
+        "lib/*"
+      ],
+      "@/styles/*": [
+        "styles/*"
+      ]
     }
   }
 }

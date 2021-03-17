@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 // TODO: logo
 // import Logo from '@/components/logo';
-import Footer from '@/components/footer';
+// TODO: footer
+// import Footer from '@/components/footer';
 
 export default function Container(props) {
   const { children /*...customMeta*/ } = props;
@@ -45,10 +46,13 @@ export default function Container(props) {
         )} */}
       </Head>
       <BetterNavigation />
-      <main id="skip" className="px-4 py-24 md:py-32 lg:px-0">
+      <main
+        id="skip"
+        className="bg-gray-50 min-h-screen px-4 py-24 md:py-32 lg:px-0"
+      >
         {children}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
@@ -74,7 +78,7 @@ const routes = [
 
 function BetterNavigation() {
   return (
-    <div className="fixed top-0 z-10 w-full py-2 bg-white border-b border-gray-400 dark:border-opacity-10 border-opacity-20 md:bg-opacity-70 dark:bg-gray-900 dark:bg-opacity-40">
+    <div className="fixed top-0 z-10 w-full py-2 bg-white border-b border-gray-400 dark:border-opacity-10 border-opacity-20 md:bg-opacity-70 dark:bg-gray-900 dark:bg-opacity-40 shadow-sm">
       <a href="#skip" className="sr-only focus:not-sr-only">
         Skip to content
       </a>

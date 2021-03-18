@@ -1,14 +1,40 @@
 import Link from 'next/link';
 
-import Container from '@/components/container';
+import { getAllFilesFrontMatter } from '@/lib/mdx';
 
-export default function Home() {
+import Container from '@/components/container';
+import { PostsList } from '@/components/posts';
+import { ProjectsList } from '@/components/projects';
+
+export async function getStaticProps() {
+  const [postsFrontMatter, projectsFrontMatter] = await Promise.all([
+    getAllFilesFrontMatter('posts'),
+    getAllFilesFrontMatter('projects'),
+  ]);
+
+  const selectedPostsFrontMatter = postsFrontMatter.filter(
+    (postsFrontMatter) => postsFrontMatter.isSelected
+  );
+
+  const selectedProjectsFrontMatter = projectsFrontMatter.filter(
+    (projectFrontMatter) => projectFrontMatter.isSelected
+  );
+
+  return { props: { selectedPostsFrontMatter, selectedProjectsFrontMatter } };
+}
+
+export default function Home({
+  selectedPostsFrontMatter,
+  selectedProjectsFrontMatter,
+}) {
   return (
     <Container>
       <div className="flex flex-col max-w-2xl mx-auto space-y-6">
         <Intro />
-        <SelectedPosts />
-        <SelectedProjects />
+        <SelectedPosts selectedPostsFrontMatter={selectedPostsFrontMatter} />
+        <SelectedProjects
+          selectedProjectsFrontMatter={selectedProjectsFrontMatter}
+        />
       </div>
     </Container>
   );
@@ -70,35 +96,13 @@ function Intro() {
   );
 }
 
-function SelectedPosts() {
-  const posts = [
-    {
-      slug: 'why-a-personal-site',
-      title: 'Why a personal site?',
-      excerpt:
-        'Something something somehitng bla bla bla how are you I hope everything is cool.',
-    },
-    {
-      slug: 'fizzbuzz',
-      title: 'How the fizzbuzz challenge made me a better developer?',
-      excerpt:
-        'Something something somehitng bla bla bla how are you I hope everything is cool.',
-    },
-    {
-      slug: 'frontend-etl',
-      title: 'Frontend ETL',
-      excerpt:
-        'Something something somehitng bla bla bla how are you I hope everything is cool.',
-    },
-  ];
+function SelectedPosts({ selectedPostsFrontMatter }) {
   return (
-    <div className="space-y-4">
+    <div className="space-y-3">
       <h3 className="text-xl tracking-tight font-extrabold text-gray-900">
         Selected Posts
       </h3>
-      {posts.map((post) => (
-        <PostItem key={post.slug} post={post} />
-      ))}
+      <PostsList postsFrontMatter={selectedPostsFrontMatter} />
       <Link href="/writing">
         <a className="inline-block hover:bg-gradient-to-r hover:from-red-200 hover:to-red-100 hover:text-gray-800">
           all posts{' '}
@@ -120,43 +124,13 @@ function SelectedPosts() {
   );
 }
 
-function PostItem({ post }) {
-  const { slug, title, excerpt } = post;
+function SelectedProjects({ selectedProjectsFrontMatter }) {
   return (
-    <div>
-      <Link href={`/writing/${slug}`}>
-        <a className="text-lg font-semibold text-gray-700 hover:bg-gradient-to-r hover:from-red-200 hover:to-red-100 hover:text-gray-800">
-          {title}
-        </a>
-      </Link>
-      <p className="text-gray-500">{excerpt}</p>
-    </div>
-  );
-}
-
-function SelectedProjects() {
-  const projects = [
-    {
-      slug: 'the-flow',
-      name: 'The Flow',
-      description:
-        'Something something somehitng bla bla bla how are you I hope everything is cool.',
-    },
-    {
-      slug: 'hff',
-      name: 'Headless Feature Flags',
-      description:
-        'Something something flags bla bla bla how are you I hope everything is feature.',
-    },
-  ];
-  return (
-    <div className="space-y-4">
+    <div className="space-y-3">
       <h3 className="text-xl tracking-tight font-extrabold text-gray-900">
         Selected Projects
       </h3>
-      {projects.map((project) => (
-        <ProjectItem key={project.name} project={project} />
-      ))}
+      <ProjectsList projectsFrontMatter={selectedProjectsFrontMatter} />
       <Link href="/projects">
         <a className="inline-block hover:bg-gradient-to-r hover:from-red-200 hover:to-red-100 hover:text-gray-800">
           all projects{' '}
@@ -174,20 +148,6 @@ function SelectedProjects() {
           </svg>
         </a>
       </Link>
-    </div>
-  );
-}
-
-function ProjectItem({ project }) {
-  const { slug, name, description } = project;
-  return (
-    <div>
-      <Link href={`/projects/${slug}`}>
-        <a className="text-lg font-semibold text-gray-700 hover:bg-gradient-to-r hover:from-red-200 hover:to-red-100 hover:text-gray-800">
-          {name}
-        </a>
-      </Link>
-      <p>{description}</p>
     </div>
   );
 }

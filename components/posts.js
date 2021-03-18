@@ -5,7 +5,7 @@ import { parseISO, format } from 'date-fns';
 import Container from '@/components/container';
 
 const editUrl = (slug) =>
-  `https://github.com/moshekatz/moshekatz.dev/edit/master/_content/posts/${slug}.mdx`;
+  `https://github.com/moshekatz/moshekatz.dev/edit/main/_content/posts/${slug}.mdx`;
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
     `https://moshekatz.dev/writing/${slug}`

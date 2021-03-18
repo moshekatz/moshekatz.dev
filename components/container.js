@@ -8,23 +8,24 @@ import { useRouter } from 'next/router';
 // import Footer from '@/components/footer';
 
 export default function Container(props) {
-  const { children /*...customMeta*/ } = props;
+  const router = useRouter();
+  const { children, ...customMeta } = props;
   // TODO: meta-content
-  // const meta = {
-  //   title: 'Lee Robinson – Developer, writer, creator.',
-  //   description: `Front-end developer, JavaScript enthusiast, and course creator.`,
-  //   image: 'https://moshekatz.dev/static/images/banner.png',
-  //   type: 'website',
-  //   ...customMeta,
-  // };
+  const meta = {
+    title: 'Moshe Katz',
+    description: `Full-stack developer, Optimizer for change, and admires simplicity.`,
+    //image: 'https://moshekatz.dev/static/images/banner.png',
+    type: 'website',
+    ...customMeta,
+  };
 
   return (
     <div className="bg-white dark:bg-black">
       <Head>
         <title>moshekatz.dev</title>
-        {/* TODO: meta-content
+        {/* TODO: meta-content */}
         <title>{meta.title}</title>
-        <meta name="robots" content="follow, index" />
+        {/* <meta name="robots" content="follow, index" /> */}
         <meta content={meta.description} name="description" />
         <meta
           property="og:url"
@@ -32,20 +33,20 @@ export default function Container(props) {
         />
         <link rel="canonical" href={`https://moshekatz.dev${router.asPath}`} />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Lee Robinson" />
+        <meta property="og:site_name" content="Moshe Katz" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
-        <meta property="og:image" content={meta.image} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@leeerob" />
+        {/* <meta property="og:image" content={meta.image} /> */}
+        {/* <meta name="twitter:card" content="summary_large_image" /> */}
+        <meta name="twitter:site" content="@moshekatzdev" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.image} />
+        {/* <meta name="twitter:image" content={meta.image} /> */}
         {meta.date && (
           <meta property="article:published_time" content={meta.date} />
-        )} */}
+        )}
       </Head>
-      <BetterNavigation />
+      <Navigation />
       <main
         id="skip"
         className="bg-gray-50 min-h-screen px-4 py-24 md:py-32 lg:px-0"
@@ -76,9 +77,9 @@ const routes = [
   },
 ];
 
-function BetterNavigation() {
+function Navigation() {
   return (
-    <div className="fixed top-0 z-10 w-full py-2 bg-white border-b border-gray-400 dark:border-opacity-10 border-opacity-20 md:bg-opacity-70 dark:bg-gray-900 dark:bg-opacity-40 shadow-sm">
+    <div className="fixed top-0 z-10 w-full py-2 bg-white border-b border-gray-400 bg-opacity-80 shadow-sm">
       <a href="#skip" className="sr-only focus:not-sr-only">
         Skip to content
       </a>

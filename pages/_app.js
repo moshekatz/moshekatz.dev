@@ -8,7 +8,6 @@ import MDXComponents from '@/components/mdx-components';
 const isProduction = process.env.NEXT_PUBLIC_VERCEL_ENV === 'production';
 
 const attributesMap = new Map();
-attributesMap.set('async', true);
 attributesMap.set('type', 'module');
 attributesMap.set('id', 'reviewerz-script');
 attributesMap.set('defer', true);
@@ -50,12 +49,13 @@ function useScript({ src, attributesMap, ignoreScript = false }) {
         // Create script
         script = document.createElement('script');
         script.setAttribute('src', src);
+        script.setAttribute('async', true);
+        script.setAttribute('data-status', 'loading');
 
         attributesMap?.forEach((value, key) => {
           script.setAttribute(key, value);
         });
 
-        script.setAttribute('data-status', 'loading');
         // Add script to document body
         document.body.appendChild(script);
 

@@ -5,7 +5,7 @@ import { MDXProvider } from '@mdx-js/react';
 
 import MDXComponents from '@/components/mdx-components';
 
-const isProduction = process.env.NODE_ENV === 'production';
+const isProduction = process.env.NEXT_PUBLIC_VERCEL_ENV === 'production';
 
 const attributesMap = new Map();
 attributesMap.set('async', true);

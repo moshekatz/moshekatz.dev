@@ -5,7 +5,7 @@ import { MDXProvider } from '@mdx-js/react';
 
 import MDXComponents from '@/components/mdx-components';
 
-const isProduction = process.env.NEXT_PUBLIC_VERCEL_ENV === 'production';
+const isPreview = process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview';
 
 const attributesMap = new Map();
 attributesMap.set('type', 'module');
@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
     src:
       'https://rvz.hagever.com/widget.js?id=6c008929-673b-4846-9611-8bb2215df6d1',
     attributesMap,
-    ignoreScript: isProduction,
+    ignoreScript: !isPreview,
   });
   return (
     <MDXProvider components={MDXComponents}>

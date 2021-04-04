@@ -20,7 +20,7 @@ export default function Container(props) {
   };
 
   return (
-    <div className="bg-white dark:bg-black">
+    <div className="bg-white">
       <Head>
         <title>moshekatz.dev</title>
         {/* TODO: meta-content */}
@@ -171,10 +171,9 @@ function DesktopNav() {
         const isActive = route.path === router.pathname;
         const defaultClasses =
           'font-sans font-semibold flex rounded items-center text-opacity-40 justify-center py-2 text-sm';
-        const activeClasses =
-          'bg-gray-900 bg-opacity-5 dark:bg-white text-primary';
+        const activeClasses = 'bg-gray-900 bg-opacity-5 text-primary';
         const inactiveClasses =
-          'hover:bg-gray-900 hover:bg-opacity-5 dark:hover:bg-white dark:text-white hover:text-gray-1000 dark:hover:text-gray-100';
+          'hover:bg-gray-900 hover:bg-opacity-5  hover:text-gray-1000';
         return (
           <Link href={route.path} key={route.path}>
             <a

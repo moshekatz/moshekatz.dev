@@ -79,7 +79,7 @@ const routes = [
 
 function Navigation() {
   return (
-    <div className="fixed top-0 z-10 w-full py-2 bg-white border-b border-gray-400 bg-opacity-80 shadow-sm">
+    <div className="fixed top-0 z-10 w-full py-2 bg-white border-b border-gray-400 bg-opacity-80 shadow-sm filter-blur">
       <a href="#skip" className="sr-only focus:not-sr-only">
         Skip to content
       </a>

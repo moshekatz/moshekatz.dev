@@ -88,7 +88,7 @@ export function PostItem({ postFrontMatter }) {
         </a>
       </Link>
       <p className="text-gray-500">{description}</p>
-      <p className="text-gray-500">
+      <p className="text-gray-500 text-sm">
         {format(parseISO(published), 'MMMM dd, yyyy')}
       </p>
     </div>

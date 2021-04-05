@@ -21,6 +21,7 @@ export function PostLayout({ children, frontMatter }) {
       image: `https://moshekatz.dev${frontMatter.image}`,
     }),
   };
+
   return (
     <Container {...customMeta}>
       <article className="flex flex-col justify-center items-start max-w-2xl mx-auto space-y-6 w-full">

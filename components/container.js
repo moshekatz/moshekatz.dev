@@ -10,11 +10,11 @@ import { useRouter } from 'next/router';
 export default function Container(props) {
   const router = useRouter();
   const { children, ...customMeta } = props;
-  // TODO: meta-content
   const meta = {
     title: 'Moshe Katz',
     description: `Full-stack developer, Optimizer for change, and admires simplicity.`,
-    //image: 'https://moshekatz.dev/static/images/banner.png',
+    // TODO: banner per image?
+    image: 'https://moshekatz.dev/static/images/banner.png',
     type: 'website',
     ...customMeta,
   };
@@ -23,9 +23,8 @@ export default function Container(props) {
     <div className="bg-white">
       <Head>
         <title>moshekatz.dev</title>
-        {/* TODO: meta-content */}
         <title>{meta.title}</title>
-        {/* <meta name="robots" content="follow, index" /> */}
+        <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
         <meta
           property="og:url"
@@ -36,12 +35,12 @@ export default function Container(props) {
         <meta property="og:site_name" content="Moshe Katz" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
-        {/* <meta property="og:image" content={meta.image} /> */}
-        {/* <meta name="twitter:card" content="summary_large_image" /> */}
+        <meta property="og:image" content={meta.image} />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@moshekatzdev" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
-        {/* <meta name="twitter:image" content={meta.image} /> */}
+        <meta name="twitter:image" content={meta.image} />
         {meta.date && (
           <meta property="article:published_time" content={meta.date} />
         )}

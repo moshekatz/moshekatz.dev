@@ -1,8 +1,3 @@
-// TODO: robots.txt
-// don't forget to add "public/robots.txt" with:
-// User-agent: *
-// Sitemap: https://moshekatz.dev/sitemap.xml
-
 const fs = require('fs');
 
 const globby = require('globby');
@@ -12,7 +7,7 @@ const prettier = require('prettier');
   const prettierConfig = await prettier.resolveConfig('./.prettierrc.js');
   const pages = await globby([
     'pages/*.js',
-    'data/**/*.mdx',
+    '_content/**/*.mdx',
     '!pages/_*.js',
     '!pages/api',
   ]);
@@ -24,7 +19,7 @@ const prettier = require('prettier');
               .map((page) => {
                 const path = page
                   .replace('pages', '')
-                  .replace('data', '')
+                  .replace('_content', '')
                   .replace('.js', '')
                   .replace('.mdx', '');
                 const route = path === '/index' ? '' : path;

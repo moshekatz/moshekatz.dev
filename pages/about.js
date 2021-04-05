@@ -4,7 +4,7 @@ import Container from '@/components/container';
 
 export default function About() {
   return (
-    <Container title="Moshe Katz" description="About Moshe Katz" type="article">
+    <Container title="About - Moshe Katz">
       <article className="flex flex-col justify-center items-start max-w-2xl mx-auto w-full">
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight text-black mb-4">
           About Me

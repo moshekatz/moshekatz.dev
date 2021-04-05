@@ -12,14 +12,17 @@ const discussUrl = (slug) =>
   )}`;
 
 export function PostLayout({ children, frontMatter }) {
+  const customMeta = {
+    title: `${frontMatter.title} - Moshe Katz`,
+    description: frontMatter.description,
+    date: new Date(frontMatter.published).toISOString(),
+    type: 'article',
+    ...(frontMatter.image && {
+      image: `https://moshekatz.dev${frontMatter.image}`,
+    }),
+  };
   return (
-    <Container
-      title={`${frontMatter.title} – Moshe Katz`}
-      description={frontMatter.description}
-      // image={`https://moshekatz.dev${frontMatter.image}`}
-      date={new Date(frontMatter.published).toISOString()}
-      type="article"
-    >
+    <Container {...customMeta}>
       <article className="flex flex-col justify-center items-start max-w-2xl mx-auto space-y-6 w-full">
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black">
           {frontMatter.title}

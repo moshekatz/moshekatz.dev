@@ -36,6 +36,7 @@ export function PostLayout({ children, frontMatter }) {
               width={24}
               src="/avatar.jpg"
               className="rounded-full"
+              priority
             />
             <p className="text-sm text-gray-700 ml-2">
               {'Moshe Katz / '}

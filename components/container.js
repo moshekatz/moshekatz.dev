@@ -2,10 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-// TODO: logo
-// import Logo from '@/components/logo';
-// TODO: footer
-// import Footer from '@/components/footer';
 
 export default function Container(props) {
   const router = useRouter();
@@ -13,7 +9,6 @@ export default function Container(props) {
   const meta = {
     title: 'Moshe Katz',
     description: `Full-stack developer, Optimizer for change, and admires simplicity.`,
-    // TODO: banner per image?
     image: 'https://moshekatz.dev/static/images/banner.png',
     type: 'website',
     ...customMeta,
@@ -52,7 +47,6 @@ export default function Container(props) {
       >
         {children}
       </main>
-      {/* <Footer /> */}
     </div>
   );
 }

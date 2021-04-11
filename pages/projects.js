@@ -3,8 +3,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx';
 import Container from '@/components/container';
 import { ProjectsList } from '@/components/projects';
 
-const description =
-  'I deploy. Mostly stuff that helps me, but also just for fun.';
+const description = 'I deploy; Mostly software I (also) use myself.';
 
 export default function Projects({ projectsFrontMatter }) {
   return (

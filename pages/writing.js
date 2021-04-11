@@ -3,7 +3,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx';
 import Container from '@/components/container';
 import { PostsList } from '@/components/posts';
 
-const description = 'I write. Mostly about code.';
+const description = 'I write; Mostly about code.';
 
 export default function Writing({ postsFrontMatter }) {
   return (

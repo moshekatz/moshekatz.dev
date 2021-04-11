@@ -8,7 +8,7 @@ export default function Container(props) {
   const { children, ...customMeta } = props;
   const meta = {
     title: 'Moshe Katz',
-    description: `Full-stack developer, Optimizer for change, and admires simplicity.`,
+    description: `Developer, Writer, Obsessed with simplicity.`,
     image: 'https://moshekatz.dev/static/images/banner.png',
     type: 'website',
     ...customMeta,
@@ -170,9 +170,13 @@ function DesktopNav() {
         const isActive = route.path === router.pathname;
         const defaultClasses =
           'font-sans font-semibold flex rounded items-center text-opacity-40 justify-center py-2 text-sm';
-        const activeClasses = 'bg-gray-900 bg-opacity-5 text-primary';
+        {
+          /* const activeClasses = 'bg-gray-900 bg-opacity-5 text-primary'; */
+        }
+        const activeClasses =
+          'bg-gradient-to-br from-[#eb5f5e] to-[#f9b353] text-gray-900 text-opacity-100 opacity-75';
         const inactiveClasses =
-          'hover:bg-gray-900 hover:bg-opacity-5  hover:text-gray-1000';
+          'hover:bg-gradient-to-br hover:from-[#eb5f5e] hover:to-[#f9b353] hover:text-gray-900 hover:text-opacity-100 hover:opacity-50';
         return (
           <Link href={route.path} key={route.path}>
             <a

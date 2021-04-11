@@ -88,7 +88,10 @@ export function PostItem({ postFrontMatter }) {
   return (
     <div>
       <Link href={`/writing/${slug}`}>
-        <a className="text-lg font-semibold text-gray-700 hover:bg-gradient-to-r hover:from-red-200 hover:to-red-100 hover:text-gray-800">
+        <a
+          className="text-lg font-semibold text-gray-800 inline-block border-b-2 border-transparent opacity-75 hover:border-b-2 hover:border-[#eb5f5e] 
+          hover:opacity-100"
+        >
           {title}
         </a>
       </Link>

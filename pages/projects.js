@@ -12,7 +12,7 @@ export default function Projects({ projectsFrontMatter }) {
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight text-black">
           Projects
         </h1>
-        <p className="font-semibold text-lg text-gray-500">{description}</p>
+        <p className="font-semibold text-lg text-gray-600">{description}</p>
         <ProjectsList projectsFrontMatter={projectsFrontMatter} />
       </div>
     </Container>

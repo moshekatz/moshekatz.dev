@@ -44,7 +44,7 @@ export function ProjectItem({ projectFrontMatter }) {
           {name}
         </a>
       </Link>
-      <p className="text-gray-500">{description}</p>
+      <p className="text-gray-600">{description}</p>
     </div>
   );
 }

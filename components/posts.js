@@ -43,7 +43,7 @@ export function PostLayout({ children, frontMatter }) {
               {format(parseISO(frontMatter.published), 'MMMM dd, yyyy')}
             </p>
           </div>
-          <p className="text-sm text-gray-500 min-w-32 mt-2 md:mt-0">
+          <p className="text-sm text-gray-600 min-w-32 mt-2 md:mt-0">
             {frontMatter.readingTime.text}
           </p>
         </div>
@@ -95,8 +95,8 @@ export function PostItem({ postFrontMatter }) {
           {title}
         </a>
       </Link>
-      <p className="text-gray-500">{description}</p>
-      <p className="text-gray-500 text-sm">
+      <p className="text-gray-600">{description}</p>
+      <p className="text-gray-600 text-sm">
         {format(parseISO(published), 'MMMM dd, yyyy')}
       </p>
     </div>

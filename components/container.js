@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 export default function Container(props) {
+  useGreeting();
   const router = useRouter();
   const { children, ...customMeta } = props;
   const meta = {
@@ -191,4 +192,20 @@ function DesktopNav() {
       })}
     </nav>
   );
+}
+
+function useGreeting() {
+  React.useEffect(() => {
+    let msg = `%c Hi 👋! Welcome to moshekatz.dev! 😍`;
+    let styles = [
+      `font-size: 16px`,
+      `font-family: monospace`,
+      `background: white`,
+      `display: inline-block`,
+      `color: black`,
+      `padding: 8px 19px`,
+      `border: 1px dashed;`,
+    ].join(';');
+    console.log(msg, styles);
+  }, []);
 }

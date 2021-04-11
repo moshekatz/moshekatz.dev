@@ -46,37 +46,38 @@ function Intro() {
       <h1 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
         Hey, I’m Moshe Katz 👋
       </h1>
-      <p className="text-gray-500">
+      <p className="text-gray-600">
         I'm a software developer who is obssesed with finding simple, elegant
         solutions to complex problems. I also{' '}
         <Link href="/projects">
           {/* <a className="inline-block bg-gradient-to-r from-red-200 to-red-100 text-gray-800 hover:bg-red-200 hover:text-gray-900"> */}
-          <a className="inline-block underline text-[#eb5f5e] opacity-100 hover:opacity-75">
+          <a className="inline-block border-b border-[#eb5f5e] text-gray-900 font-semibold">
             build in the open
           </a>
         </Link>{' '}
         and{' '}
         <Link href="/writing">
-          <a className="inline-block underline text-[#eb5f5e] opacity-100 hover:opacity-75">
+          <a className="inline-block border-b border-[#eb5f5e] text-gray-900 font-semibold">
             learn in public
           </a>
         </Link>{' '}
         while doing that.
       </p>
-      <p className="text-gray-500">
+      <p className="text-gray-600">
         I hope you'll enjoy my personal slice of the internet - you can also{' '}
         <a
           href="https://twitter.com/moshekatzdev"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block underline text-[#1da1f1] opacity-100 hover:opacity-75"
+          // className="inline-block underline text-[#1da1f1] opacity-100 hover:opacity-75"
+          className="inline-block border-b border-[#1da1f1] text-gray-900 font-semibold"
         >
           follow me on Twitter
         </a>{' '}
         while you're here :)
       </p>
       <Link href="/about">
-        <a className="inline-block border-b-2 border-[#f9b353] text-gray-700 opacity-75 hover:opacity-100">
+        <a className="inline-block font-semibold border-b-2 border-[#f9b353] text-gray-800 opacity-75 hover:opacity-100">
           Read more about me{' '}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -99,13 +100,12 @@ function Intro() {
 function SelectedPosts({ selectedPostsFrontMatter }) {
   return (
     <div className="space-y-3">
-      <h3 className="text-xl tracking-tight font-extrabold text-gray-900">
+      <h2 className="text-xl tracking-tight font-extrabold text-gray-900">
         Selected Posts
-      </h3>
+      </h2>
       <PostsList postsFrontMatter={selectedPostsFrontMatter} />
       <Link href="/writing">
-        <a className="inline-block border-b-2 border-[#f9b353] text-gray-700 opacity-75 hover:opacity-100">
-          {/* <a className="inline-block hover:bg-gradient-to-r hover:from-red-200 hover:to-red-100 hover:text-gray-800"> */}
+        <a className="inline-block font-semibold border-b-2 border-[#f9b353] text-gray-800 opacity-75 hover:opacity-100">
           Read all posts{' '}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -128,12 +128,12 @@ function SelectedPosts({ selectedPostsFrontMatter }) {
 function SelectedProjects({ selectedProjectsFrontMatter }) {
   return (
     <div className="space-y-3">
-      <h3 className="text-xl tracking-tight font-extrabold text-gray-900">
+      <h2 className="text-xl tracking-tight font-extrabold text-gray-900">
         Selected Projects
-      </h3>
+      </h2>
       <ProjectsList projectsFrontMatter={selectedProjectsFrontMatter} />
       <Link href="/projects">
-        <a className="inline-block border-b-2 border-[#f9b353] text-gray-700 opacity-75 hover:opacity-100">
+        <a className="inline-block font-semibold border-b-2 border-[#f9b353] text-gray-800 opacity-75 hover:opacity-100">
           {/* <a className="inline-block hover:bg-gradient-to-r hover:from-red-200 hover:to-red-100 hover:text-gray-800"> */}
           See all projects{' '}
           <svg

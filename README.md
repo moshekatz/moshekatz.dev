@@ -7,11 +7,9 @@ The code that powers moshekatz.dev.
 ```bash
 $ git clone https://github.com/moshekatz/moshekatz.dev.git
 $ cd moshekatz.dev
-$ npm
+$ npm i
 $ npm run dev
 ```
-
-Create a `.env.local` file similar to [`.env.example`](https://github.com/moshekatz/moshekatz.dev.io/blob/main/.env.example).
 
 ## Built Using
 

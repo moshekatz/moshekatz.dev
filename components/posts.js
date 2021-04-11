@@ -43,7 +43,7 @@ export function PostLayout({ children, frontMatter }) {
               {format(parseISO(frontMatter.published), 'MMMM dd, yyyy')}
             </p>
           </div>
-          <p className="text-sm text-gray-500 min-w-32 mt-2 md:mt-0">
+          <p className="text-sm text-gray-600 min-w-32 mt-2 md:mt-0">
             {frontMatter.readingTime.text}
           </p>
         </div>
@@ -88,12 +88,15 @@ export function PostItem({ postFrontMatter }) {
   return (
     <div>
       <Link href={`/writing/${slug}`}>
-        <a className="text-lg font-semibold text-gray-700 hover:bg-gradient-to-r hover:from-red-200 hover:to-red-100 hover:text-gray-800">
+        <a
+          className="text-lg font-semibold text-gray-800 inline-block border-b-2 border-transparent opacity-75 hover:border-b-2 hover:border-[#eb5f5e] 
+          hover:opacity-100"
+        >
           {title}
         </a>
       </Link>
-      <p className="text-gray-500">{description}</p>
-      <p className="text-gray-500 text-sm">
+      <p className="text-gray-600">{description}</p>
+      <p className="text-gray-600 text-sm">
         {format(parseISO(published), 'MMMM dd, yyyy')}
       </p>
     </div>

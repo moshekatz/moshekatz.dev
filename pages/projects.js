@@ -3,8 +3,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx';
 import Container from '@/components/container';
 import { ProjectsList } from '@/components/projects';
 
-const description =
-  'I deploy. Mostly stuff that helps me, but also just for fun.';
+const description = 'I deploy; Mostly software I (also) use myself.';
 
 export default function Projects({ projectsFrontMatter }) {
   return (
@@ -13,7 +12,7 @@ export default function Projects({ projectsFrontMatter }) {
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight text-black">
           Projects
         </h1>
-        <p className="font-semibold text-lg text-gray-500">{description}</p>
+        <p className="font-semibold text-lg text-gray-600">{description}</p>
         <ProjectsList projectsFrontMatter={projectsFrontMatter} />
       </div>
     </Container>

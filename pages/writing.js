@@ -3,7 +3,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx';
 import Container from '@/components/container';
 import { PostsList } from '@/components/posts';
 
-const description = 'I write. Mostly about code.';
+const description = 'I write; Mostly about code.';
 
 export default function Writing({ postsFrontMatter }) {
   return (
@@ -12,7 +12,7 @@ export default function Writing({ postsFrontMatter }) {
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight text-black">
           Writing
         </h1>
-        <p className="font-semibold text-lg text-gray-500">{description}</p>
+        <p className="font-semibold text-lg text-gray-600">{description}</p>
         <PostsList postsFrontMatter={postsFrontMatter} />
       </div>
     </Container>

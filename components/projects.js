@@ -37,11 +37,14 @@ export function ProjectItem({ projectFrontMatter }) {
   return (
     <div>
       <Link href={`/projects/${slug}`}>
-        <a className="text-lg font-semibold text-gray-700 hover:bg-gradient-to-r hover:from-red-200 hover:to-red-100 hover:text-gray-800">
+        <a
+          className="text-lg font-semibold text-gray-800 inline-block border-b-2 border-transparent opacity-75 hover:border-b-2 hover:border-[#eb5f5e] 
+          hover:opacity-100"
+        >
           {name}
         </a>
       </Link>
-      <p className="text-gray-500">{description}</p>
+      <p className="text-gray-600">{description}</p>
     </div>
   );
 }

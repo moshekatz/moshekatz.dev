@@ -20,7 +20,11 @@ export default function Writing({ postsFrontMatter }) {
 }
 
 export async function getStaticProps() {
-  const postsFrontMatter = await getAllFilesFrontMatter('posts');
+  const allPostsFrontMatter = await getAllFilesFrontMatter('posts');
+
+  const postsFrontMatter = allPostsFrontMatter.filter(
+    (postFrontMatter) => !postFrontMatter.isDraft
+  );
 
   return { props: { postsFrontMatter } };
 }

@@ -20,7 +20,11 @@ export default function Projects({ projectsFrontMatter }) {
 }
 
 export async function getStaticProps() {
-  const projectsFrontMatter = await getAllFilesFrontMatter('projects');
+  const allProjectsFrontMatter = await getAllFilesFrontMatter('projects');
+
+  const projectsFrontMatter = allProjectsFrontMatter.filter(
+    (projectFrontMatter) => !projectFrontMatter.isDraft
+  );
 
   return { props: { projectsFrontMatter } };
 }

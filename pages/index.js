@@ -13,11 +13,13 @@ export async function getStaticProps() {
   ]);
 
   const selectedPostsFrontMatter = postsFrontMatter.filter(
-    (postsFrontMatter) => postsFrontMatter.isSelected
+    (postsFrontMatter) =>
+      postsFrontMatter.isSelected && !postsFrontMatter.isDraft
   );
 
   const selectedProjectsFrontMatter = projectsFrontMatter.filter(
-    (projectFrontMatter) => projectFrontMatter.isSelected
+    (projectFrontMatter) =>
+      projectFrontMatter.isSelected && !projectFrontMatter.isDraft
   );
 
   return { props: { selectedPostsFrontMatter, selectedProjectsFrontMatter } };

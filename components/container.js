@@ -168,7 +168,10 @@ function DesktopNav() {
   return (
     <nav className="hidden max-w-screen-md grid-cols-4 gap-1 mx-auto md:grid">
       {routes.map((route) => {
-        const isActive = route.path === router.pathname;
+        const isActive =
+          router.pathname === '/'
+            ? route.label === 'Home'
+            : router.pathname.includes(route.path) && route.label !== 'Home';
         const defaultClasses =
           'font-sans font-semibold flex rounded items-center text-opacity-40 justify-center py-2 text-sm';
         {
@@ -194,18 +197,23 @@ function DesktopNav() {
   );
 }
 
+let isFirstRender = true;
+
 function useGreeting() {
   React.useEffect(() => {
-    let msg = `%c Hi 👋! Welcome to moshekatz.dev! 😍`;
-    let styles = [
-      `font-size: 16px`,
-      `font-family: monospace`,
-      `background: white`,
-      `display: inline-block`,
-      `color: black`,
-      `padding: 8px 19px`,
-      `border: 1px dashed;`,
-    ].join(';');
-    console.log(msg, styles);
+    if (isFirstRender) {
+      let msg = `%c Hi 👋! Welcome to moshekatz.dev! 😍`;
+      let styles = [
+        `font-size: 16px`,
+        `font-family: monospace`,
+        `background: white`,
+        `display: inline-block`,
+        `color: black`,
+        `padding: 8px 19px`,
+        `border: 1px dashed;`,
+      ].join(';');
+      console.log(msg, styles);
+      isFirstRender = false;
+    }
   }, []);
 }

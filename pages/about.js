@@ -9,12 +9,6 @@ export default function About() {
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight text-black mb-4">
           About Me
         </h1>
-        <h2 className="text-2xl text-gray-800 font-semibold">
-          <span className="bg-gradient-to-r from-yellow-300 to-yellow-200 font-mono">
-            TODO:
-          </span>{' '}
-          long-about
-        </h2>
         <div className="prose max-w-none w-full">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

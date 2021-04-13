@@ -6,7 +6,7 @@ export function ProjectLayout({ children, frontMatter }) {
     <Container
       title={`${frontMatter.name} – Moshe Katz`}
       description={frontMatter.description}
-      // image={`https://moshekatz.dev${frontMatter.image}`}
+      image={`https://moshekatz.dev${frontMatter.image}`}
       type="article"
     >
       <article className="flex flex-col justify-center items-start max-w-2xl mx-auto space-y-6 w-full">

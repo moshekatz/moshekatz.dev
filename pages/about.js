@@ -63,7 +63,7 @@ export default function About() {
 
           <p>
             If you'd like to get in touch with me{' '}
-            <a href="mailto:moshe.katz@hey.com">email</a> and{' '}
+            <a href="mailto:moshe.katz@hey.com">Email</a> and{' '}
             <a
               href="https://twitter.com/moshekatzdev"
               target="_blank"

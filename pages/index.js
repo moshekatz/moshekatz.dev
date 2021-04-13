@@ -52,7 +52,6 @@ function Intro() {
         A software developer who is obssesed with finding simple, elegant
         solutions to complex problems. I also{' '}
         <Link href="/projects">
-          {/* <a className="inline-block bg-gradient-to-r from-red-200 to-red-100 text-gray-800 hover:bg-red-200 hover:text-gray-900"> */}
           <a className="inline-block border-b border-[#eb5f5e] text-gray-900 font-semibold">
             build in the open
           </a>

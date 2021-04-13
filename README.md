@@ -1,6 +1,6 @@
 # moshekatz.dev
 
-The code that powers moshekatz.dev.
+The code that powers [moshekatz.dev](https://moshekatz.dev).
 
 ## Running Locally
 

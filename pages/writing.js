@@ -22,9 +22,13 @@ export default function Writing({ postsFrontMatter }) {
 export async function getStaticProps() {
   const allPostsFrontMatter = await getAllFilesFrontMatter('posts');
 
-  const postsFrontMatter = allPostsFrontMatter.filter(
-    (postFrontMatter) => !postFrontMatter.isDraft
-  );
+  const postsFrontMatter = allPostsFrontMatter
+    .filter((postFrontMatter) => !postFrontMatter.isDraft)
+    .sort(
+      (postsFrontMatterA, postsFrontMatterB) =>
+        new Date(postsFrontMatterB.published) -
+        new Date(new Date(postsFrontMatterA.published))
+    );
 
   return { props: { postsFrontMatter } };
 }

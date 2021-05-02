@@ -12,10 +12,16 @@ export async function getStaticProps() {
     getAllFilesFrontMatter('projects'),
   ]);
 
-  const selectedPostsFrontMatter = postsFrontMatter.filter(
-    (postsFrontMatter) =>
-      postsFrontMatter.isSelected && !postsFrontMatter.isDraft
-  );
+  const selectedPostsFrontMatter = postsFrontMatter
+    .filter(
+      (postsFrontMatter) =>
+        postsFrontMatter.isSelected && !postsFrontMatter.isDraft
+    )
+    .sort(
+      (postsFrontMatterA, postsFrontMatterB) =>
+        new Date(postsFrontMatterA.published) -
+        new Date(new Date(postsFrontMatterB.published))
+    );
 
   const selectedProjectsFrontMatter = projectsFrontMatter.filter(
     (projectFrontMatter) =>

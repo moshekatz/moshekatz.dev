@@ -55,7 +55,7 @@ function Intro() {
         Hey, I’m Moshe Katz 👋
       </h1>
       <p className="text-gray-600">
-        A software developer who is obssesed with finding simple, elegant
+        A software developer who is obsessed with finding simple, elegant
         solutions to complex problems. I also{' '}
         <Link href="/projects">
           <a className="inline-block border-b border-[#eb5f5e] text-gray-900 font-semibold">

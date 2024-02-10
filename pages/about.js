@@ -12,26 +12,7 @@ export default function About() {
             developer currently living in Tel Aviv.
           </p>
 
-          <p>
-            Having finished my B.Sc. (Computer Science) at 19 years old, I’ve
-            developed an extensive skillset from an early age.
-          </p>
-
-          <p>
-            In the past, I served at the IDF building web applications, leading
-            a team of 10 developers incrementaly adopt React into our Angular
-            1.X web app, and leveling up our technology stack along the way
-            using tools like Typescript, Webpack, Eslint, Prettier and Jest.
-          </p>
-
-          <p>
-            I was also an Aide-de camp to the C4I Technology Division Commander,
-            where I was in charge of the ongoing management of operational and
-            technological unit of more than 3,000 officers and soldiers. More
-            importantly, during that time I was a core contributer to the design
-            and implementation of the unit's strategy, culture and core values,
-            learning tons of lessons along the way.
-          </p>
+          <p>I'm obsessed with finding simple, elegant solutions to complex problems.</p>
 
           <p>
             You can find me on{' '}

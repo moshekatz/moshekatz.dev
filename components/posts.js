@@ -8,7 +8,7 @@ const editUrl = (slug) =>
   `https://github.com/moshekatz/moshekatz.dev/edit/main/_content/posts/${slug}.mdx`;
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
-    `https://moshekatz.dev/writing/${slug}`
+    `https://moshekatz.dev/writing/${slug}`,
   )}`;
 
 export function PostLayout({ children, frontMatter }) {
@@ -87,13 +87,12 @@ export function PostItem({ postFrontMatter }) {
   const { slug, title, description, published } = postFrontMatter;
   return (
     <div>
-      <Link href={`/writing/${slug}`}>
-        <a
-          className="text-lg font-semibold text-gray-800 inline-block border-b-2 border-transparent opacity-75 hover:border-b-2 hover:border-[#eb5f5e] 
+      <Link
+        href={`/writing/${slug}`}
+        className="text-lg font-semibold text-gray-800 inline-block border-b-2 border-transparent opacity-75 hover:border-b-2 hover:border-[#eb5f5e] 
           hover:opacity-100"
-        >
-          {title}
-        </a>
+      >
+        {title}
       </Link>
       <p className="text-gray-600">{description}</p>
       <p className="text-gray-600 text-sm">

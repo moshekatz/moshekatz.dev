@@ -1,11 +1,12 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2022: true,
     node: true,
   },
   extends: [
     'eslint:recommended',
+    'next/core-web-vitals',
     'plugin:react/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
@@ -14,7 +15,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 12,
+    ecmaVersion: 2022,
     sourceType: 'module',
   },
   plugins: ['react'],

@@ -12,7 +12,10 @@ export default function About() {
             developer currently living in Tel Aviv.
           </p>
 
-          <p>I'm obsessed with finding simple, elegant solutions to complex problems.</p>
+          <p>
+            I'm obsessed with finding simple, elegant solutions to complex
+            problems.
+          </p>
 
           <p>
             You can find me on{' '}
@@ -31,15 +34,10 @@ export default function About() {
             >
               GitHub
             </a>{' '}
-            where I’m building in the open, and also right here on this website
-            where I{' '}
-            <Link href="/writing">
-              <a>learn in public</a>
-            </Link>{' '}
-            and share behind the scenes of the{' '}
-            <Link href="/projects">
-              <a>projects I work on.</a>
-            </Link>
+            where I'm building in the open, and also right here on this website
+            where I <Link href="/writing">learn in public</Link> and share
+            behind the scenes of the{' '}
+            <Link href="/projects">projects I work on.</Link>
           </p>
 
           <p>

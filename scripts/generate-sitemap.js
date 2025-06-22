@@ -1,10 +1,11 @@
 const fs = require('fs');
 
-const globby = require('globby');
-const prettier = require('prettier');
-
 (async () => {
-  const prettierConfig = await prettier.resolveConfig('./.prettierrc.js');
+  const { globby } = await import('globby');
+  const prettier = await import('prettier');
+
+  const prettierConfig =
+    await prettier.default.resolveConfig('./.prettierrc.js');
   const pages = await globby([
     'pages/*.js',
     '_content/**/*.mdx',
@@ -34,11 +35,10 @@ const prettier = require('prettier');
         </urlset>
     `;
 
-  const formatted = prettier.format(sitemap, {
+  const formatted = await prettier.default.format(sitemap, {
     ...prettierConfig,
     parser: 'html',
   });
 
-  // eslint-disable-next-line no-sync
   fs.writeFileSync('public/sitemap.xml', formatted);
 })();

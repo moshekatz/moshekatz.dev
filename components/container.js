@@ -151,8 +151,12 @@ function MobileNav() {
             const defaultClasses = `flex font-sans items-center pl-12 py-4 font-semibold text-sm text-primary text-opacity-80`;
 
             return (
-              <Link href={route.path} key={route.path}>
-                <a className={`${defaultClasses}`}>{route.label}</a>
+              <Link
+                href={route.path}
+                key={route.path}
+                className={`${defaultClasses}`}
+              >
+                {route.label}
               </Link>
             );
           })}
@@ -173,23 +177,22 @@ function DesktopNav() {
             ? route.label === 'Home'
             : router.pathname.includes(route.path) && route.label !== 'Home';
         const defaultClasses =
-          'font-sans font-semibold flex rounded items-center text-opacity-40 justify-center py-2 text-sm';
+          'font-sans font-semibold flex rounded items-center justify-center py-2 text-sm transition-all duration-200 relative';
         {
           /* const activeClasses = 'bg-gray-900 bg-opacity-5 text-primary'; */
         }
         const activeClasses =
-          'bg-gradient-to-br from-[#eb5f5e] to-[#f9b353] text-gray-900 text-opacity-100 opacity-75';
-        const inactiveClasses =
-          'hover:bg-gradient-to-br hover:from-[#eb5f5e] hover:to-[#f9b353] hover:text-gray-900 hover:text-opacity-100 hover:opacity-50';
+          'text-gray-900 after:absolute after:bottom-1 after:left-1/2 after:transform after:-translate-x-1/2 after:w-4 after:h-0.5 after:bg-gray-800 after:rounded-full';
+        const inactiveClasses = 'text-gray-500 hover:text-gray-700';
         return (
-          <Link href={route.path} key={route.path}>
-            <a
-              className={`
+          <Link
+            href={route.path}
+            key={route.path}
+            className={`
                 ${defaultClasses} 
                 ${isActive ? activeClasses : inactiveClasses}`}
-            >
-              {route.label}
-            </a>
+          >
+            {route.label}
           </Link>
         );
       })}

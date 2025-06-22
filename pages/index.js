@@ -15,17 +15,17 @@ export async function getStaticProps() {
   const selectedPostsFrontMatter = postsFrontMatter
     .filter(
       (postsFrontMatter) =>
-        postsFrontMatter.isSelected && !postsFrontMatter.isDraft
+        postsFrontMatter.isSelected && !postsFrontMatter.isDraft,
     )
     .sort(
       (postsFrontMatterA, postsFrontMatterB) =>
         new Date(postsFrontMatterA.published) -
-        new Date(new Date(postsFrontMatterB.published))
+        new Date(new Date(postsFrontMatterB.published)),
     );
 
   const selectedProjectsFrontMatter = projectsFrontMatter.filter(
     (projectFrontMatter) =>
-      projectFrontMatter.isSelected && !projectFrontMatter.isDraft
+      projectFrontMatter.isSelected && !projectFrontMatter.isDraft,
   );
 
   return { props: { selectedPostsFrontMatter, selectedProjectsFrontMatter } };
@@ -52,21 +52,23 @@ function Intro() {
   return (
     <div className="space-y-4">
       <h1 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
-        Hey, I’m Moshe Katz 👋
+        Hey, I'm Moshe Katz 👋
       </h1>
       <p className="text-gray-600">
         A software developer who is obsessed with finding simple, elegant
         solutions to complex problems. I also{' '}
-        <Link href="/projects">
-          <a className="inline-block border-b border-[#eb5f5e] text-gray-900 font-semibold">
-            build in the open
-          </a>
+        <Link
+          href="/projects"
+          className="inline-block border-b border-[#eb5f5e] text-gray-900 font-semibold"
+        >
+          build in the open
         </Link>{' '}
         and{' '}
-        <Link href="/writing">
-          <a className="inline-block border-b border-[#eb5f5e] text-gray-900 font-semibold">
-            learn in public
-          </a>
+        <Link
+          href="/writing"
+          className="inline-block border-b border-[#eb5f5e] text-gray-900 font-semibold"
+        >
+          learn in public
         </Link>{' '}
         while doing that.
       </p>
@@ -83,22 +85,23 @@ function Intro() {
         </a>{' '}
         while you're here :)
       </p>
-      <Link href="/about">
-        <a className="inline-block font-semibold border-b-2 border-[#f9b353] text-gray-800 opacity-75 hover:opacity-100">
-          Read more about me{' '}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            className="h-4 inline-block opacity-75 hover:opacity-100"
-          >
-            <path
-              fillRule="evenodd"
-              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </a>
+      <Link
+        href="/about"
+        className="inline-block font-semibold border-b-2 border-[#f9b353] text-gray-800 opacity-75 hover:opacity-100"
+      >
+        Read more about me{' '}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          className="h-4 inline-block opacity-75 hover:opacity-100"
+        >
+          <path
+            fillRule="evenodd"
+            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+            clipRule="evenodd"
+          />
+        </svg>
       </Link>
     </div>
   );
@@ -111,22 +114,23 @@ function SelectedPosts({ selectedPostsFrontMatter }) {
         Selected Posts
       </h2>
       <PostsList postsFrontMatter={selectedPostsFrontMatter} />
-      <Link href="/writing">
-        <a className="inline-block font-semibold border-b-2 border-[#f9b353] text-gray-800 opacity-75 hover:opacity-100">
-          Read all posts{' '}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            className="h-4 inline-block opacity-75 hover:opacity-100"
-          >
-            <path
-              fillRule="evenodd"
-              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </a>
+      <Link
+        href="/writing"
+        className="inline-block font-semibold border-b-2 border-[#f9b353] text-gray-800 opacity-75 hover:opacity-100"
+      >
+        Read all posts{' '}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          className="h-4 inline-block opacity-75 hover:opacity-100"
+        >
+          <path
+            fillRule="evenodd"
+            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+            clipRule="evenodd"
+          />
+        </svg>
       </Link>
     </div>
   );
@@ -139,23 +143,24 @@ function SelectedProjects({ selectedProjectsFrontMatter }) {
         Selected Projects
       </h2>
       <ProjectsList projectsFrontMatter={selectedProjectsFrontMatter} />
-      <Link href="/projects">
-        <a className="inline-block font-semibold border-b-2 border-[#f9b353] text-gray-800 opacity-75 hover:opacity-100">
-          {/* <a className="inline-block hover:bg-gradient-to-r hover:from-red-200 hover:to-red-100 hover:text-gray-800"> */}
-          See all projects{' '}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            className="h-4 inline-block opacity-75 hover:opacity-100"
-          >
-            <path
-              fillRule="evenodd"
-              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </a>
+      <Link
+        href="/projects"
+        className="inline-block font-semibold border-b-2 border-[#f9b353] text-gray-800 opacity-75 hover:opacity-100"
+      >
+        {/* <a className="inline-block hover:bg-gradient-to-r hover:from-red-200 hover:to-red-100 hover:text-gray-800"> */}
+        See all projects{' '}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          className="h-4 inline-block opacity-75 hover:opacity-100"
+        >
+          <path
+            fillRule="evenodd"
+            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+            clipRule="evenodd"
+          />
+        </svg>
       </Link>
     </div>
   );

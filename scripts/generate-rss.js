@@ -11,13 +11,13 @@ async function generate() {
   });
 
   const posts = await fs.readdir(
-    path.join(__dirname, '..', '_content', 'posts')
+    path.join(__dirname, '..', '_content', 'posts'),
   );
 
   await Promise.all(
     posts.map(async (name) => {
       const content = await fs.readFile(
-        path.join(__dirname, '..', '_content', 'posts', name)
+        path.join(__dirname, '..', '_content', 'posts', name),
       );
       const frontmatter = matter(content);
 
@@ -27,7 +27,7 @@ async function generate() {
         date: frontmatter.data.publishedAt,
         description: frontmatter.data.summary,
       });
-    })
+    }),
   );
 
   await fs.writeFile('./public/feed.xml', feed.xml({ indent: true }));

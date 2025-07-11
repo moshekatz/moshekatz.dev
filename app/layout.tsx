@@ -1,6 +1,8 @@
 import HomeLink from "./HomeLink";
 import Link from "./Link";
 import { serif } from "./fonts";
+import Color from "colorjs.io";
+
 import "./global.css";
 
 export const metadata = {
@@ -24,12 +26,21 @@ export default function RootLayout({
         <main>
           <Activity mode="visible">{children}</Activity>
         </main>
-        <footer className="mt-12">
-          This site is highly inspired by Dan Abramov's work at{" "}
+        <footer className="mt-8">
+          <hr className="mb-4" />
+          This blog is highly inspired by Dan Abramov's work at{" "}
           <Link
             target="_blank"
             href="https://overreacted.io"
-            style={{ textDecoration: "underline" }}
+            style={
+              {
+                backgroundImage:
+                  "linear-gradient(45deg, var(--overreacted-pink), var(--overreacted-purple))",
+                backgroundClip: "text",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              } as any
+            }
           >
             overreacted.io
           </Link>

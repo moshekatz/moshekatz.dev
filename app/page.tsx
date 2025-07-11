@@ -1,5 +1,4 @@
 import Link from "./Link";
-import Color from "colorjs.io";
 import { metadata, getPosts, Post } from "./posts";
 import { sans } from "./fonts";
 
@@ -27,28 +26,13 @@ export default async function Home() {
 }
 
 function PostTitle({ post }: { post: Post }) {
-  let lightStart = new Color("lab(63 59.32 -1.47)");
-  let lightEnd = new Color("lab(33 42.09 -43.19)");
-  let lightRange = lightStart.range(lightEnd);
-  let darkStart = new Color("lab(81 32.36 -7.02)");
-  let darkEnd = new Color("lab(78 19.97 -36.75)");
-  let darkRange = darkStart.range(darkEnd);
-  let today = new Date();
-  let timeSinceFirstPost = (today.getTime() - new Date(2018, 10, 30).getTime());
-  let timeSinceThisPost = (today.getTime() - new Date(post.date).getTime());
-  let staleness = timeSinceThisPost / timeSinceFirstPost;
-
   return (
     <h2
       className={[
         sans.className,
         "text-[28px] font-black leading-none mb-2",
-        "text-[--lightLink] dark:text-[--darkLink]",
+        "text-[--main]",
       ].join(" ")}
-      style={{
-        "--lightLink": lightRange(staleness).toString(),
-        "--darkLink": darkRange(staleness).toString(),
-      } as any}
     >
       {post.title}
     </h2>

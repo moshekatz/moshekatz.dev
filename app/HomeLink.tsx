@@ -19,8 +19,8 @@ export default function HomeLink() {
       <span
         style={
           {
-            "--myColor1": isActive ? "var(--text)" : "var(--pink)",
-            "--myColor2": isActive ? "var(--text)" : "var(--purple)",
+            "--myColor1": isActive ? "var(--text)" : "var(--main)",
+            "--myColor2": isActive ? "var(--text)" : "var(--secondary)",
             backgroundImage:
               "linear-gradient(45deg, var(--myColor1), var(--myColor2))",
             backgroundClip: "text",

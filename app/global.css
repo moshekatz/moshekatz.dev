@@ -11,7 +11,8 @@
   --inlineCode-text: #1a1a1a;
   --main: lab(40 50 20);
   --secondary: lab(60 -20 -30);
-  --link: var(--main);
+  --link-bg: #f2e39b;
+  --link-hover-bg: #ddd3a5;
   --overreacted-pink: lab(63 59.32 -1.47);
   --overreacted-purple: lab(33 42.09 -43.19);
   --svg-filter: none;
@@ -26,7 +27,8 @@
     --inlineCode-text: #e6e6e6;
     --main: lab(60 50 20);
     --secondary: lab(80 -20 -30);
-    --link: var(--main);
+    --link-bg: lab(50 50 20);
+    --link-hover-bg: lab(60 50 20);
     --overreacted-pink: lab(81 32.36 -7.02);
     --overreacted-purple: lab(78 19.97 -36.75);
     --svg-filter: invert(93%) hue-rotate(180deg);

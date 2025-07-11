@@ -50,8 +50,8 @@ export async function generateFeed() {
 
   const feedOptions = {
     author: {
-      name: "Dan Abramov",
-      email: "dan.abramov@gmail.com",
+      name: "Moshe Katz",
+      email: "me@moshekatz.dev",
       link: site_url,
     },
     description: metadata.description,

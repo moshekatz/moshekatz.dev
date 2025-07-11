@@ -17,7 +17,7 @@ export async function generateHomeImage() {
         width: "100%",
         height: "100%",
         backgroundColor: "rgb(40, 44, 53)",
-        color: "white",
+        color: "rgba(255, 255, 255, 0.88)",
       }}
     >
       <div
@@ -34,7 +34,7 @@ export async function generateHomeImage() {
       >
         <span
           style={{
-            backgroundImage: "linear-gradient(45deg, #ffb3d8, #cbb6ff)",
+            backgroundImage: "linear-gradient(45deg, #e79ac7, #b8a9d9)",
             backgroundClip: "text",
             WebkitBackgroundClip: "text",
             color: "transparent",
@@ -57,7 +57,7 @@ export async function generatePostImage({ title }) {
         width: "100%",
         height: "100%",
         backgroundColor: "rgb(40, 44, 53)",
-        color: "white",
+        color: "rgba(255, 255, 255, 0.88)",
       }}
     >
       <div
@@ -72,7 +72,7 @@ export async function generatePostImage({ title }) {
       >
         <span
           style={{
-            backgroundImage: "linear-gradient(45deg, #ffb3d8, #cbb6ff)",
+            backgroundImage: "linear-gradient(45deg, #e79ac7, #b8a9d9)",
             backgroundClip: "text",
             WebkitBackgroundClip: "text",
             color: "transparent",

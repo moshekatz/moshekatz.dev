@@ -1,7 +1,6 @@
 import HomeLink from "./HomeLink";
 import Link from "./Link";
 import { serif } from "./fonts";
-import Color from "colorjs.io";
 
 import "./global.css";
 

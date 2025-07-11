@@ -11,8 +11,10 @@
   @apply pb-8;
 }
 
-.markdown a:not(.tip):not(.linked-heading) {
-  @apply border-b-[1px] border-[--link] text-[--link];
+.markdown a:not(.linked-heading) {
+  /* @apply border-b-[1px] border-[--link] text-[--link]; */
+  @apply bg-[--link-bg] hover:bg-[--link-hover-bg];
+  @apply px-1 py-0.5 rounded-md;
 }
 
 .markdown hr {
@@ -139,29 +141,4 @@
   background-color: #022a4b;
   display: block;
   padding-right: 1em;
-}
-
-.tip {
-  @apply inline-block px-8 py-4 font-sans font-semibold text-xl rounded-full shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50 border-b-[1px] text-white overflow-clip transition-transform;
-  border-color: var(--link);
-}
-
-.tip.tip-sm {
-  @apply inline-block px-6 py-2 text-lg shadow-md;
-}
-
-.tip-bg {
-  background-image: linear-gradient(45deg, var(--secondary), var(--main));
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-@media (prefers-color-scheme: dark) {
-  .tip-bg {
-    filter: brightness(0.46);
-  }
 }

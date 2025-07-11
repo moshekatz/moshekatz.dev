@@ -56,8 +56,8 @@ export async function generatePostImage({ title }) {
         flexDirection: "column",
         width: "100%",
         height: "100%",
-        backgroundColor: "rgb(40, 44, 53)",
-        color: "rgba(255, 255, 255, 0.88)",
+        backgroundColor: "rgba(255, 255, 255, 0.88)",
+        color: "rgb(40, 44, 53)",
       }}
     >
       <div

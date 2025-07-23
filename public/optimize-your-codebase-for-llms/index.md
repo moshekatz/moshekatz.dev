@@ -29,9 +29,41 @@ Over the past few months of working daily with AI tools, I think I've gathered a
 
 The less context required to solve a task, the simpler it'll be for the LLM.
 
-In other words, patterns that promotes local reasoning
+In other words, patterns that promotes local reasoning will optimize our codebase for LLMs. Let's take a look at a few:
 
 #### Local components vs. Global style sheets
+
+Let's take a look at this CSS class:
+
+```css
+main > section button {
+  border-radius: 1rem;
+}
+```
+
+Which will match the following markup:
+
+```html
+<main>
+  <section>
+    <button>Click me</button>
+    <!-- ✅ This gets the rounded border -->
+  </section>
+</main>
+```
+
+The issue with it is that the logic is coupled to the structure. Any minor change to the structure (add a wrapping `div`, change the `section` to a different element) could break our behavior - it requires global reasoning.
+
+```html {2,6}
+<main>
+  <!-- ❌ This breaks our logic -->
+  <div>
+    <section>
+      <button>Won't match</button>
+    </section>
+  </div>
+</main>
+```
 
 **TODO:** Practical patterns and tips
 

@@ -1,8 +1,35 @@
 ---
-title: "How I optimize my codebase for LLMs"
-date: "2025-07-21"
-spoiler: "LLMs could be REALLY powerful, but they need our help"
+title: "Optimize your codebase for humans"
+date: "2025-08-04"
+spoiler: "Turns out, it'll help LLMs too"
 ---
+
+Congratulations!
+
+A new developer has joined your team.
+She's passionate, eager to learn, and with an exceptional work rate.
+
+How long until she ramp up and start contributing, days? Weeks?
+
+I understand. She need to setup her local env, go over the docs, study the system architecture.
+
+Then her first PR arrived! And so is your review:
+
+- "Please leverage our design system."
+- "Make sure to log potential errors"
+- "Use our `fetch` wrapper when making API calls"
+
+No one blames her, it wasn't clear from the docs, and the CI checks are all green.
+
+"Ah yes, you're absolutely right.", until the next commit.
+
+Did I mention her name, by the way?
+
+**It's Cursor**.
+
+There are many more like her on their way, are you ready to onboard them all?
+
+-----
 
 Ever wondered what makes a task solvable by LLMs?
 

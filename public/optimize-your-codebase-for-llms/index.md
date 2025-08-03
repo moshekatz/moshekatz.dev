@@ -1,35 +1,35 @@
 ---
-title: "Optimize your codebase for humans"
+title: "Optimize for humans now, benefit from LLMs later"
 date: "2025-08-04"
-spoiler: "Turns out, it'll help LLMs too"
+spoiler: "It tends to help LLMs too"
 ---
 
 Congratulations!
 
 A new developer has joined your team.
-She's passionate, eager to learn, and with an exceptional work rate.
+She's passionate, eager to learn, with an exceptional work rate.
 
-How long until she ramp up and start contributing, days? Weeks?
+How long until she ramp up and start contributing to the codebase? Days? Maybe weeks?
 
-I understand. She need to setup her local env, go over the docs, study the system architecture.
+I understand. She need to setup her local environment, go over the docs, study the system architecture.
 
-Then her first PR arrived! And so is your review:
+Then, her first pull request arrives! And so does your review:
 
-- "Please leverage our design system."
+- "Please leverage our design system"
 - "Make sure to log potential errors"
-- "Use our `fetch` wrapper when making API calls"
+- "Use our custom `fetch` wrapper when making API calls"
 
-No one blames her, it wasn't clear from the docs, and the CI checks are all green.
+No one blames her, it wasn't clear from the docs, and the CI checks are all green - this is why we do code reviews after all, and there will be less and less comments over time.
 
-"Ah yes, you're absolutely right.", until the next commit.
+"You're absolutely right.", until the next commit.
 
-Did I mention her name, by the way?
+Oh, did I mention her name?
 
-**It's Cursor**.
+**It's "Cursor"**.
 
-There are many more like her on their way, are you ready to onboard them all?
+And there are many more like her on their way, are you ready to onboard them all?
 
------
+## It's all about context
 
 Ever wondered what makes a task solvable by LLMs?
 
@@ -39,7 +39,62 @@ I believe the term **"context engineering"** could give us a good hint, as [desc
 
 The easier it'll be for LLM to gather all the context required to solve a task, the higher chances it'll actually get done.
 
-Over the past few months of working daily with AI tools, I think I've gathered a few patterns that optimize for exactly that, and I'd like to share them with you.
+If you think about it, the same statement also applies to a new (human) hire.
+
+While AI is changing quickly, I figured it's time to write down the core patterns I always find myself hold on to, optimizing codebases for humans:
+
+So instead of focusing on the AI landscape that changes every week now, I figured it's time to focus on the patterns that I keep coming back to, the one that haven't changed in years.
+
+These are the ones I use to optimize a codebase for humans:
+
+1. Embrace standards
+2. Shorten the feedback loop
+3. Constraints
+4. Facilitate local reasoning
+
+
+What I, and [others](https://x.com/kentcdodds/status/1950932680201126169) have come to find, is that the patterns that made the life of humans easier, tends to be really good for LLMs too.
+
+Optimize for humans now, benefit from LLMs later. Let's go.
+
+## Embrace standards
+
+Dump
+- ?
+
+## Shorten the feedback loop
+
+Dump
+- Humans find it easy to split complex tasks into smaller ones
+- Quick feedback loops allow exactly that
+- 
+
+## Constraints
+
+Dump
+- ?
+
+## Facilitate local reasoning
+
+Arguably the most important one on the list.
+
+
+Dump
+- https://sophiebits.com/2020/01/01/fast-maintainable-db-patterns
+- React
+- Tailwind
+- Pure functions (and services?)
+- E2E tests
+- Colocation
+
+> you should be able to worry about each part of your code in isolation, without holding the entire system in your head
+
+## Conclusion
+
+Dump
+- ?
+
+----
 
 **A few disclaimers before we deep dive**
 

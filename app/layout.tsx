@@ -27,7 +27,7 @@ export default function RootLayout({
         </main>
         <footer className="mt-8">
           <hr className="mb-4" />
-          This blog is highly inspired by Dan Abramov's{" "}
+          The blog is inspired by Dan Abramov's{" "}
           <Link
             target="_blank"
             href="https://overreacted.io"

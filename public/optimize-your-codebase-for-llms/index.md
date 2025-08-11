@@ -15,7 +15,7 @@ Then, her first pull request arrives! And so does your review:
 - "You can use `<Alert/>` from our design system here"
 - "Please bound network calls with a timeout"
 
-No one blames her, it wasn't clear from the onboarding or the task description, and the CI checks are all green - this is why we do code reviews after all, right? And there will be less and less comments over time.
+No one blames her, it wasn't clear from the task description and the CI checks are all green - this is why we do code reviews after all, right? And there will be less and less comments over time.
 
 "You're absolutely right.", until the next commit.
 
@@ -27,7 +27,7 @@ And there are many more like her on their way, are you ready to onboard them all
 
 ## It's all about context
 
-Ever wondered what makes a task possible to be perform by LLMs?
+Ever wondered what makes a task solvable by LLMs?
 
 The term **"context engineering"** could give us a good hint, as [described](https://x.com/tobi/status/1935533422589399127) by Tobi Lutke, Shopify's CEO:
 
@@ -89,7 +89,7 @@ Which will match the following markup:
 </main>
 ```
 
-The issue with such rule is that its logic is coupled to the structure or our markup - any minor change to it (add a wrapping `form` or change the `section` to a different element) could break our behavior:
+The issue with such rule is that its logic is coupled to the structure the markup, any minor change to it (add a wrapping `form` or change the `section` to a different element) could break our behavior:
 
 ```html {4,6}
 <main>
@@ -149,7 +149,7 @@ Even if they had an infinite context window, it'll just move the bottleneck to h
 
 Codebases that makes it easy to break down tasks are the ones I find delightful to work in.
 
-Sophie Alpert described it perfectly in a highly recommended piece about [Fast and maintainable patterns for fetching from a database](https://sophiebits.com/2020/01/01/fast-maintainable-db-patterns):
+Sophie Alpert described it perfectly in her post about [Fast and maintainable patterns for fetching from a database](https://sophiebits.com/2020/01/01/fast-maintainable-db-patterns):
 
 > You should be able to worry about each part of your code in isolation, without holding the entire system in your head. In my experience, this is the key to making complex systems scale, especially (but not only) in a large organization.
 
@@ -167,11 +167,11 @@ Add Tailwind into the mix and you'd get isolated styling that just works, and ma
 
 They promote APIs that are [optimized for change](https://overreacted.io/optimized-for-change/).
 
-### Dataloader
+### dataloader
 
 [dataloader](https://github.com/graphql/dataloader) keeps our data fetching layer performant via batching and caching requests, removing the need to constantly ask "Is someone else fetching this in another place already?".
 
-Once again, an API that allows us to simplify our code by placing logic as close as possible to its usage - without the trade-offs of duplicating requests or complicating our logic.
+Once again, an API that allows us to simplify our code by placing logic as close as possible to its usage.
 
 I truly urge you to read the [article](https://sophiebits.com/2020/01/01/fast-maintainable-db-patterns) by Sophie I also shared above, that explains how it can make your app code faster and more maintainable.
 
@@ -191,7 +191,7 @@ Interestingly, many of the patterns that facilitate local reasoning, promotes co
 
 The Backend-for-Frontend pattern, promoted by [React Router](https://remix.run/docs/en/main/guides/bff) (aka Remix), [Next.js](https://nextjs.org/) and [trpc](https://trpc.io/) enables us to keep frontend related concerns as close as possible to it.
 
-It helps preventing from frontend specific logic to leak into shared backend services, making frontend teams less dependant on external teams and opens a door to unique optimizations.
+It helps frontend specific logic to leak into shared backend services, making frontend teams less dependant on external teams, and opens a door to unique optimizations.
 
 You can even get automated type checking _across the network boundary_!
 
@@ -215,13 +215,13 @@ Linting, testing and type checking shares the same principal.
 
 They make it easy for humans to perform changes safely or spend less effort on repetitive tasks, and LLMs would benefit from it too!
 
-The more we'd invest in such tools, the more we'd be able to invest in complex tasks that require our unique thinking.
+The more we'd invest in such tools, the more we'd be able to leverage humans and LLMs in complex tasks that require unique thinking.
 
 ### Leverage previous knowledge
 
-Humans have accumulated knowledge over the years, and so did LLMs that are already pre-trained on some huge dataset.
+Humans have accumulated knowledge over the years, and so have LLMs that are already pre-trained on some huge dataset.
 
-We should be able to leverage that!
+We should be able to leverage it!
 
 If the context required to solve a task is already known, the less effort we'd need to invest in order to provide it somehow.
 

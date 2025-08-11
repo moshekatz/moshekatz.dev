@@ -231,12 +231,19 @@ I hope you have good docs to share, because new human hires or LLMs won't be fam
 
 The more a codebase will rely on [transferable knowledge](https://remix.run/blog/not-another-framework) like web standards, the better chances both humans and LLMs will already know them, and no additional context will be needed in order to solve a task.
 
-## Conclusion
+## Takeaways
 
 The mental model of treating LLM tools like Cursor as a new human hire introduces us with an opportunity:
 
 **There are more reasons than ever to optimize our onboarding, codebase and processes for humans.**
 
-Not only we'd gain immediate boost by having the team more efficient, but we'd be better positioned to leverage the power of LLMs.
+Let's wrap up a few of the principles we went over:
+
+- **Treat LLMs like new hires** - The same principles that make onboarding easy for humans also help LLMs perform better.
+- **Facilitate local reasoning** - Promote tools and patterns that allow to worry about each part of your code in isolation, without holding the entire system in your head.
+- **Leverage automation** - Offload repetitive or low-value tasks from both humans and LLMs using the right automation tools.
+- **Prefer transferable knowledge** - Stick to standards and common patterns so less context needs to be explained.
+
+With those in place, not only we'd gain immediate boost by having the team more efficient, but also be better positioned to leverage the power of LLMs.
 
 A win-win.

@@ -237,7 +237,7 @@ The mental model of treating LLM tools like Cursor as a new human hire introduce
 
 **There are more reasons than ever to optimize our onboarding, codebase and processes for humans.**
 
-Let's wrap up a few of the principles we went over:
+Here's a recap of the principles we went over:
 
 - **Treat LLMs like new hires** - The same principles that make onboarding easy for humans also help LLMs perform better.
 - **Facilitate local reasoning** - Promote tools and patterns that allow to worry about each part of your code in isolation, without holding the entire system in your head.

@@ -34,7 +34,7 @@ export async function generateHomeImage() {
       >
         <span
           style={{
-            backgroundImage: "linear-gradient(45deg, #773b41, #97aab0)",
+            backgroundImage: "linear-gradient(45deg, #ab3141, #059dc5)",
             backgroundClip: "text",
             WebkitBackgroundClip: "text",
             color: "transparent",
@@ -72,7 +72,7 @@ export async function generatePostImage({ title }) {
       >
         <span
           style={{
-            backgroundImage: "linear-gradient(45deg, #773b41, #97aab0)",
+            backgroundImage: "linear-gradient(45deg, #ab3141, #059dc5)",
             backgroundClip: "text",
             WebkitBackgroundClip: "text",
             color: "transparent",

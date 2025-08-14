@@ -191,7 +191,7 @@ Interestingly, many of the patterns that facilitate local reasoning, promotes co
 
 The Backend-for-Frontend pattern, promoted by [React Router](https://remix.run/docs/en/main/guides/bff) (aka Remix), [Next.js](https://nextjs.org/) and [trpc](https://trpc.io/) enables us to keep frontend related concerns as close as possible to it.
 
-It helps frontend specific logic to leak into shared backend services, making frontend teams less dependant on external teams, and opens a door to unique optimizations.
+It allows to prevent frontend specific logic to leak into shared backend services, making frontend teams less dependant on external teams, and opens a door to unique optimizations.
 
 You can even get automated type checking _across the network boundary_!
 
